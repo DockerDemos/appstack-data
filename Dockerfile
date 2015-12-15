@@ -1,7 +1,7 @@
-FROM centos:centos7
-MAINTAINER Chris Collins <collins.christopher@gmail.com>
+# This is a completely blank image used for linking containers' data volumes
 
-VOLUME ["/var/www/html", "/var/lib/mysql", "/var/log", "/var/backup", "/conf", "/root/.secret" ]
+FROM scratch
+MAINTAINER Chris Collins <christopher.collins@duke.edu>
 
-ENTRYPOINT ["/bin/echo"]
-CMD ["'NO APPLICATION NAME SPECIFIED'"]
+VOLUME ["/var/www/html", "/var/lib/mysql", "/var/log", "/var/backup", "/conf"]
+CMD ["-"]
